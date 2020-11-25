@@ -2,7 +2,11 @@
 // DEFINE FUNCTION(S)
 // ==================================================
 function sum(num1, num2) {
-  return num1 + num2;
+  if (num2 == null) {
+    return num1
+  } else {
+    return num1 + num2;
+  }
 }
 
 // ==================================================
@@ -27,6 +31,8 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = sum(2);
+  if (result !== 2) throw new Error('Expected sum(2) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4
